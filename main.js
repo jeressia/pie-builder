@@ -11,11 +11,13 @@ const printToDom = (divId, textToPrint) => {
 const domStringBuilder = (arrayToPrint) => {
     let domString = '';
     arrayToPrint.forEach((ingredient) => {
-        domString += `<div class="card">`
-        domString += `<div class="card-body col-3">`
+        domString += `<div class="card col-3 mx-1 my-1">`
+        domString += `<div class="card-body">`
         domString += `<h5 class="card-title">${ingredient.item}</h5>`
         // domString += `<a href="#" class="btn btn-primary">Go somewhere</a>`
         domString += `</div>`
+        domString += `</div>`
+
     });
    printToDom('ingredient-container',domString);
 }
